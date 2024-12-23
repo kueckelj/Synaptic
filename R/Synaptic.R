@@ -206,6 +206,7 @@ update_dummy <- function(){}
 
 # a -----------------------------------------------------------------------
 
+#' @importFrom SPATA2 activateImage activeImage
 #' @inherit SPATA2::activateImage title description params return
 #' @rdname activateImage
 #' @export
