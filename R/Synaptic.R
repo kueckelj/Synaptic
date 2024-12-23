@@ -1417,7 +1417,7 @@ gamma_correct_image <- function(object, img_name, exp){
 
   image <- hist_img@image
 
-  image <- normalize(image)
+  image <- EBImage::normalize(image)
 
   image <- image ^ 0.5
 
