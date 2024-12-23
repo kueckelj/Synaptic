@@ -4,3 +4,7 @@
 .httr-oauth
 .DS_Store
 .quarto
+py_venv
+data
+docs
+R_scripts
