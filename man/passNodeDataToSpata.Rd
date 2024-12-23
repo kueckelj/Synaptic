@@ -40,7 +40,9 @@ based on the nearest electrode assignment. The metadata is added as new variable
 The function first identifies the nearest electrode for each observation in the SPATA object using
 \code{\link[=identifyNME]{identifyNME()}}. Metadata variables from the MEA nodes, specified in \code{var_names}, are then
 transferred to the observations. Observations farther than \code{max_dist} from any electrode are excluded
-from the mapping. Transferred variables can be renamed using the \code{naming} argument, allowing for
+from the mapping and will obtain NA values!
+
+Transferred variables can be renamed using the \code{naming} argument, allowing for
 custom naming patterns in the \code{\link{SPATA2}} metadata.
 }
 \seealso{

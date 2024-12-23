@@ -1,14 +1,17 @@
 Package: Synaptic
-Title: What the Package Does (One Line, Title Case)
+Title: Utilities for MEA-ST Integration
 Version: 0.0.0.9000
 Authors@R: 
     person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+Description: A framework for analysis and cross-platform integration of Multi-Electrode-Array data.
 License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
     license
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
+Imports: 
+    ggnewscale,
+    tidygraph
 URL: https://github.com/kueckelj/Synaptic
 BugReports: https://github.com/kueckelj/Synaptic/issues

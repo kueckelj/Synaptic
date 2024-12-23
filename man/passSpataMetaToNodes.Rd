@@ -16,10 +16,10 @@ passSpataMetaToNodes(
 \item{object}{An object of class \code{\link[SPATA2]{SPATA2}} or, in case of S4 generics,
 objects of classes for which a method has been defined.}
 
-\item{var_names}{\emph{character}. A vector of metadata variable names in the \code{\link{SPATA2}} object to transfer
+\item{var_names}{A character vector of metadata variable names in the \code{\link{SPATA2}} object to transfer
 to the MEA nodes.}
 
-\item{mea_names}{\emph{character} (optional). A vector of MEA names to which the metadata should be
+\item{mea_names}{A character vector of MEA names to which the metadata should be
 transferred. Defaults to all MEAs in the object (\code{getMeaNames(object)}).}
 
 \item{max_dist}{\emph{numeric} (optional). Maximum allowable distance for mapping metadata from
@@ -38,8 +38,10 @@ For each MEA specified in \code{mea_names}, this function identifies the nearest
 for each observation using \code{\link[=identifyNME]{identifyNME()}}. Metadata variables specified in \code{var_names} are
 then transferred to the corresponding nodes. If multiple observations map to the same node,
 the closest observation (based on distance) is used. Observations beyond \code{max_dist} are
-excluded from the mapping. The function supports transferring variables to multiple MEAs
-within the same \code{\link{SPATA2}} object.
+excluded from the mapping and will obtain NA values.
+
+The function supports transferring variables to multiple MEAs within the same \code{\link{SPATA2}} object
+with \code{mea_names}, which defaults to all MEA objects.
 }
 \seealso{
 \code{\link[=identifyNME]{identifyNME()}}, \code{\link[=addVarsToNodes]{addVarsToNodes()}}, \code{\link[=computeDistToNME]{computeDistToNME()}}

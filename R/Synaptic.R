@@ -2715,9 +2715,9 @@ passNodeDataToSpata <- function(object,
 #' the nearest electrode (NME) for each observation. The mapped metadata is added as variables
 #' to the nodes in the MEA design.
 #'
-#' @param var_names *character*. A vector of metadata variable names in the [`SPATA2`] object to transfer
+#' @param var_names A character vector of metadata variable names in the [`SPATA2`] object to transfer
 #' to the MEA nodes.
-#' @param mea_names *character* (optional). A vector of MEA names to which the metadata should be
+#' @param mea_names A character vector of MEA names to which the metadata should be
 #' transferred. Defaults to all MEAs in the object (`getMeaNames(object)`).
 #' @param max_dist *numeric* (optional). Maximum allowable distance for mapping metadata from
 #' observations to nodes. Observations beyond this distance are excluded from the mapping.
