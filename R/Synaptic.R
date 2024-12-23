@@ -2035,6 +2035,7 @@ setMethod(
   }
 )
 
+#' @importFrom SPATA2 getScaleFactor
 #' @inherit SPATA2::getScaleFactor title description params return details
 #' @export
 setMethod(
