@@ -647,6 +647,7 @@ computeDistToNME <- function(object,
 
 }
 
+#' @importFrom SPATA2 containsHistoImages
 #' @inherit SPATA2::containsHistoImages title description params return
 #' @export
 setMethod(
@@ -1517,6 +1518,7 @@ setMethod(
 
 
 
+#' @importFrom SPATA2 getHistoImage
 #' @inherit SPATA2::getHistoImage title description params return
 #' @export
 setMethod(
@@ -2005,7 +2007,7 @@ setMethod(
 )
 
 
-
+#' @importFrom SPATA2 getPixelScaleFactor
 #' @inherit SPATA2::getPixelScaleFactor title description params return
 #' @export
 setMethod(
@@ -3305,8 +3307,13 @@ setMethod(
   signature = "SPATA2",
   definition = function(object, ids, opt = "keep"){
 
-    getMeaData(object) %>%
+    mea <-
+      getMeaData(object) %>%
       subsetMEA(object = ., ids = ids, opt = opt)
+
+    object <- setMeaData(object, mea_data = mea)
+
+    return(object)
 
   }
 )
